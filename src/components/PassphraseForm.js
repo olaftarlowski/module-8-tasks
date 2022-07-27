@@ -19,14 +19,14 @@ const PassphraseForm = () => {
     setPass(e.target.value);
   };
 
-  console.log(appCtx);
-
   return (
     <form
       onSubmit={submitHandler}
       style={{ display: "flex", flexDirection: "column" }}
     >
-      <label htmlFor="pass">Pass</label>
+      <label htmlFor="pass" style={{ margin: 40 }}>
+        Pass
+      </label>
       <input type="text" value={pass} onChange={passHandler} />
       <button type="submit">submit</button>
     </form>
