@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <h1>entry: 123</h1>
         <div>
-          <nav>
+          <nav style={{ marginBottom: 24 }}>
             <Link
               to="/"
               style={{ margin: 20, padding: 12, border: "1px solid lightgray" }}

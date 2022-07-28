@@ -4,10 +4,11 @@ import withUser from "./withUser";
 const Places = (props) => {
   return (
     <div>
-      <div>{props.email}</div>
-      <div>{props.isAdmin}</div>
+      <h2>places</h2>
+      <div>places email: {props.email}</div>
+      <div>{props.isAdmin ? "user is an admin" : "user is not an admin"}</div>
     </div>
   );
 };
 
-export default withUser(Places());
+export default withUser(Places);

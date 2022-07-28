@@ -1,14 +1,23 @@
-import { useContext, useState } from "react";
+import React from "react";
 import { AppContext } from "./store/AppContext";
 
-const withUser = (WrappedComponent) => {
-  const someData = {
-    email: "jan@kowalski.pl",
-    isAdmin: false,
+function withUser(WrappedComponent) {
+  return class extends React.Component {
+    render() {
+      return (
+        <AppContext.Consumer>
+          {(value) => {
+            return (
+              <WrappedComponent
+                email={value.user.email}
+                isAdmin={value.user.isAdmin}
+              />
+            );
+          }}
+        </AppContext.Consumer>
+      );
+    }
   };
-
-  // const appCtx = useContext(AppContext);
-  return <WrappedComponent mail={someData.email} isAdmin={someData.isAdmin} />;
-};
+}
 
 export default withUser;
