@@ -1,5 +1,5 @@
 import React from "react";
-import withUser from "./withUser";
+import { withUser } from "./";
 
 const Movies = (props) => {
   return (

@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarLink {
+  padding: 12px;
+  border: 1px solid lightgray;
+}
+
+.navbarLinkItem {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+}
